@@ -37,19 +37,19 @@ app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.use(
-  session({
-    secret: "asdfefna",
-    saveUninitialized: false,
-    resave: false,
-    store: MongoStore.create({
-      mongoUrl: URL,
-    }),
-    cookie: {
-      expires: 60 * 60 * 24 * 1000 * 30,
-    },
-  })
-);
+// app.use(
+//   session({
+//     secret: "asdfefna",
+//     saveUninitialized: false,
+//     resave: false,
+//     store: MongoStore.create({
+//       mongoUrl: URL,
+//     }),
+//     cookie: {
+//       expires: 60 * 60 * 24 * 1000 * 30,
+//     },
+//   })
+// );
 app.use(express.json());
 // To initialize cors
 app.use(
