@@ -20,20 +20,20 @@ const password = process.env.DB_PASSWORD;
 
 const URL = `mongodb://${username}:${password}@ac-yiuldeo-shard-00-00.8pambxl.mongodb.net:27017,ac-yiuldeo-shard-00-01.8pambxl.mongodb.net:27017,ac-yiuldeo-shard-00-02.8pambxl.mongodb.net:27017/quiz-network?ssl=true&replicaSet=atlas-xlqrrv-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
-app.use(
-  session({
-    key: "userId",
-    secret: "asdfefna",
-    saveUninitialized: false,
-    resave: false,
-    store: MongoStore.create({
-      mongoUrl: URL,
-    }),
-    cookie: {
-      expires: 60 * 60 * 24 * 1000 * 30,
-    },
-  })
-);
+// app.use(
+//   session({
+//     key: "userId",
+//     secret: "asdfefna",
+//     saveUninitialized: false,
+//     resave: false,
+//     store: MongoStore.create({
+//       mongoUrl: URL,
+//     }),
+//     cookie: {
+//       expires: 60 * 60 * 24 * 1000 * 30,
+//     },
+//   })
+// );
 
 // Schemas Start
 
