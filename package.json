@@ -4,7 +4,7 @@
   "description": "A quiz network platform.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yash Kumar Saini",
@@ -18,7 +18,6 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "mongoose": "^6.7.2",
-    "mongoose-auto-increment": "^5.0.1",
-    "nodemon": "^2.0.20"
+    "mongoose-auto-increment": "^5.0.1"
   }
 }
