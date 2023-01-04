@@ -42,6 +42,7 @@ app.use(
     secret: "asdfefna",
     saveUninitialized: false,
     resave: false,
+    httpOnly:true,
     store: MongoStore.create({
       mongoUrl: URL,
     }),
