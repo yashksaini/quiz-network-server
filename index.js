@@ -20,7 +20,7 @@ const MongoStore = require("connect-mongo");
 
 // Initialize express
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // dotenv is used to store passwords
 dotenv.config();
@@ -63,4 +63,4 @@ app.use(
 // For handling many requests
 app.use("/", Routes);
 
-app.listen(PORT, () => console.log(`Server is running`));
+app.listen(PORT, () => console.log(`Server is running at ${PORT}`));
