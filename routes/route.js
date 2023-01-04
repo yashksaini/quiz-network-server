@@ -77,7 +77,6 @@ const Attempt = mongoose.model("attempts", attemptSchema);
 // Schemas End
 
 router.get("/auth", function (req, res) {
-  console.log(req.session);
   if (req.session.isAuth) {
     res.send(true);
   } else {
