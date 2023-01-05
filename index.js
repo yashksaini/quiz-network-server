@@ -42,7 +42,6 @@ app.use(
     secret: "asdfefna",
     saveUninitialized: false,
     resave: false,
-//     domain: ".onrender.com",
     store: MongoStore.create({
       mongoUrl: URL,
     }),
@@ -50,6 +49,7 @@ app.use(
       expires: 60 * 60 * 24 * 1000 * 30,
       sameSite: "none",
       secure: true,
+      domain: ".onrender.com",
     },
   })
 );
