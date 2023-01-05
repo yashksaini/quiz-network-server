@@ -44,6 +44,7 @@ app.use(
     resave: false,
     sameSite: "none",
     secure: true,
+    domain: ".onrender.com",
     store: MongoStore.create({
       mongoUrl: URL,
     }),
