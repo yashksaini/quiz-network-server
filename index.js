@@ -44,7 +44,7 @@ app.use(
     resave: false,
     sameSite: "none",
     secure: true,
-    domain: ".onrender.com",
+//     domain: ".onrender.com",
     store: MongoStore.create({
       mongoUrl: URL,
     }),
@@ -60,6 +60,7 @@ app.use(
     origin: true,
     method: ["GET", "POST"],
     credentials: true,
+    exposedHeaders: ["set-cookie"],
   })
 ); // It help in sending data from one end point to another end point
 
