@@ -42,14 +42,14 @@ app.use(
     secret: "asdfefna",
     saveUninitialized: false,
     resave: false,
-    sameSite: "none",
-    secure: true,
 //     domain: ".onrender.com",
     store: MongoStore.create({
       mongoUrl: URL,
     }),
     cookie: {
       expires: 60 * 60 * 24 * 1000 * 30,
+      sameSite: "none",
+      secure: true,
     },
   })
 );
