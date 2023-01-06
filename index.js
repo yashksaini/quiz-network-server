@@ -47,9 +47,9 @@ app.use(
     }),
     cookie: {
       expires: 60 * 60 * 24 * 1000 * 30,
-      sameSite: "none",
+      SameSite: "none",
       secure: true,
-      domain: ".onrender.com",
+      Domain: ".onrender.com",
     },
   })
 );
