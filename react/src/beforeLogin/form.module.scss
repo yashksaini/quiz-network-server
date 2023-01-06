@@ -1,0 +1,184 @@
+$primary: #15af8a;
+$mutedGreen: #d6efc7;
+$white: #fff;
+$warning: #ff813a;
+$light: #f9f9f9;
+$color: #194e48;
+.outerBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  min-height: 100vh;
+}
+.formBox {
+  width: 576px;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 32px;
+  text-align: center;
+  background-color: $white;
+  img {
+    width: 135px;
+    aspect-ratio: 1;
+  }
+  h1 {
+    font-size: 44px;
+    margin: 16px 0;
+    font-weight: 200;
+    color: $primary;
+  }
+  h2 {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 400;
+    color: $color;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 16px;
+    color: $color;
+  }
+  p {
+    text-align: left;
+    font-size: 20px;
+    color: $color;
+    font-weight: 200;
+  }
+  h6 {
+    font-size: 20px;
+    color: $color;
+    font-weight: 300;
+  }
+  a {
+    display: inline;
+    text-decoration: none;
+    font-weight: 500;
+    color: $color;
+  }
+  //for error message
+  h4 {
+    color: $warning;
+    margin: 16px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  //for success message
+  h5 {
+    color: $primary;
+    margin: 16px 0;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+.inputBox {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  margin: 32px 0;
+  border-radius: 16px;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding: 12px 16px;
+    border: 1px solid $color;
+    color: $color;
+    border-radius: 8px;
+    font-size: 20px;
+    &:focus {
+      outline: none;
+      border: 1px solid $primary;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: $color;
+    z-index: 2;
+    height: 20px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    background-color: $white;
+  }
+  &:focus-within span {
+    color: $primary !important;
+  }
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin: 24px 0;
+  background-color: $primary;
+  border: 1px solid $primary;
+  font-size: 18px;
+  font-weight: 500;
+  color: $white;
+  transition: all 0.4s;
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  &:disabled {
+    background-color: $mutedGreen;
+    color: $color;
+    border: none;
+    cursor: unset;
+  }
+}
+@media only screen and (max-width: 816px) {
+  .formBox {
+    padding: 16px;
+    img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+  }
+  .inputBox {
+    height: 44px;
+    margin: 32px 0;
+    input {
+      font-size: 16px;
+      height: 44px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}

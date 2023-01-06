@@ -1,0 +1,171 @@
+$background-color: #f8fafc;
+$white: #fff;
+$color: #334155;
+$small: #999999;
+$border: #c0c0c0;
+$focus: #15AF8A;
+$lowfocus: #d2fff4;
+$warning: #fffeeb;
+$danger: #f8fcc0;
+$success: #e7ffe1;
+.outerBox {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 400px;
+  padding: 32px;
+  box-sizing: border-box;
+  min-height: 506px;
+  margin: 32px 0;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px;
+  border-radius: 16px;
+  background-color: $white;
+  .heading {
+    text-align: center;
+    color: $color;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  p {
+    text-align: center;
+    color: $color;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  a {
+    display: inline;
+    text-decoration: none;
+    font-weight: 500;
+    color: $focus;
+  }
+  h6 {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $warning;
+    border: 1px solid $danger;
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+  }
+  h5 {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $success;
+    border: 1px solid $success;
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px;
+  }
+}
+.title {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+  h1 {
+    line-height: 48px;
+    color: $color;
+  }
+}
+.inputBox {
+  width: 100%;
+  position: relative;
+  height: 44px;
+  margin: 32px 0;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid $border;
+    color: $color;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+      border: 1px solid $focus;
+    }
+  }
+  span {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: $small;
+    z-index: 2;
+    height: 20px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+    background-color: $white;
+  }
+  &:focus-within span {
+    color: $focus !important;
+  }
+}
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  margin: 24px 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: $focus;
+  border: 1px solid $focus;
+  font-size: 18px;
+  font-weight: 500;
+  color: $white;
+  transition: all 0.4s;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  &:disabled {
+    background-color: $lowfocus;
+    color: $color;
+    border: none;
+    cursor: unset;
+  }
+}
+.hide {
+  display: none !important;
+}
+@media only screen and (max-width: 450px) {
+  .outerBox {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  .box {
+    width: 100%;
+    margin: 0px;
+  }
+}
