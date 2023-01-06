@@ -126,6 +126,7 @@ router.post("/login", async (request, response) => {
       if (docs) {
         request.session.user = docs._id;
         request.session.isAuth = true;
+        console.log(request.session);
         response.send(true);
       } else {
         response.send(false);
