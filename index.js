@@ -21,7 +21,7 @@ const path = require("path");
 
 // Initialize express
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // dotenv is used to store passwords
 dotenv.config();
@@ -61,7 +61,7 @@ app.use(
   })
 ); // It help in sending data from one end point to another end point
 
-app.use(express.static(path.join(__dirname + "/build")));
+app.use(express.static(path.join(__dirname + "/public")));
 // For handling many requests
 app.use("/", Routes);
 
