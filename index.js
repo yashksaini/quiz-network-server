@@ -17,10 +17,11 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
+const path = require("path");
 
 // Initialize express
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = 8000;
 
 // dotenv is used to store passwords
 dotenv.config();
@@ -47,7 +48,6 @@ app.use(
     }),
     cookie: {
       expires: 60 * 60 * 24 * 1000 * 30,
-      domain: ".onrender.com",
     },
   })
 );
@@ -58,11 +58,11 @@ app.use(
     origin: true,
     method: ["GET", "POST"],
     credentials: true,
-    exposedHeaders: ["set-cookie"],
   })
 ); // It help in sending data from one end point to another end point
 
+app.use(express.static(path.join(__dirname + "/build")));
 // For handling many requests
 app.use("/", Routes);
 
-app.listen(PORT, () => console.log(`Server is running at ${PORT}`));
+app.listen(PORT, () => console.log(`Server is running`));
